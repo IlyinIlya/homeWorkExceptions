@@ -16,8 +16,7 @@ public class Main {
             System.out.println("Недопустимый логин: " + el.getMessage());
         } catch (WrongPasswordException ep) {
             System.out.println("Недопустимый пароль: " + ep.getMessage());
-        }
-        finally {
+        } finally {
             System.out.println("Подождите...");
         }
         return false;
@@ -27,8 +26,8 @@ public class Main {
         if (!login.matches("(\\w+)")) {
             throw new WrongLoginException("В логине " + login + " использованы недопустимые символы");
         } else if (login.length() > 20) {
-                throw new WrongLoginException("Логин " + login + " содержит более 20 символов");
-            }
+            throw new WrongLoginException("Логин " + login + " содержит более 20 символов");
+        }
     }
 
     private static void validatePassword(String password, String confirmPassword) throws WrongPasswordException {
