@@ -1,12 +1,7 @@
 package Exceptions;
 
-public class WrongLoginException extends Exception {
+public class WrongLoginException extends RuntimeException {
     public WrongLoginException(String message) {
         super(message);
-    }
-
-    @Override
-    public String getMessage() {
-        return super.getMessage();
     }
 }
